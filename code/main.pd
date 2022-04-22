@@ -1,4 +1,4 @@
-#N canvas -7 23 1440 830 12;
+#N canvas 412 95 1440 830 12;
 #X obj 14 46 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 1 1
 ;
 #X obj 266 104 sequencer, f 35;
@@ -190,55 +190,56 @@
 #X obj 168 516 *~;
 #X obj 270 384 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 0 1;
-#X obj 769 636 r ON;
-#X floatatom 801 662 5 0 0 0 - - -;
-#X obj 769 686 metro;
-#X obj 769 709 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 897 391 r ON;
+#X floatatom 929 417 5 0 0 0 - - -;
+#X obj 897 441 metro;
+#X obj 897 464 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 801 729 + 1;
-#X msg 699 708 -1;
-#X obj 699 690 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 929 484 + 1;
+#X msg 827 463 -1;
+#X obj 827 445 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 699 668 loadbang;
-#X obj 808 524 vsl 15 128 130 300 0 0 empty empty empty 0 -9 0 10 -204800
+#X obj 827 423 loadbang;
+#X obj 936 279 vsl 15 128 130 300 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 12700 1;
-#X obj 769 728 f;
-#X obj 769 751 drum;
+#X obj 897 483 f;
+#X obj 897 506 drum;
 #X text 622 138 switches the chords that are being played, f 18;
-#X text 700 573 Random generative snare sound, f 13;
+#X text 828 328 Random generative snare sound, f 13;
 #X obj 554 570 throw~ voice_s;
-#X obj 769 776 throw~ drum_s;
+#X obj 897 531 throw~ drum_s;
 #X obj 142 214 catch~ drum_s;
 #X obj 29 214 catch~ voice_s;
-#X obj 808 498 loadbang;
+#X obj 936 253 loadbang;
 #X obj 1092 618 loadbang;
 #X obj 1387 393 loadbang;
 #X obj 1030 408 throw~ tick_s;
 #X obj 168 491 catch~ tick_s;
 #X obj 138 440 catch~ priep_s;
 #X obj 1206 785 throw~ priep_s;
-#X obj 257 691 glitter_sound;
-#X obj 300 617 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 884 748 glitter_sound;
+#X obj 926 689 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 257 718 dac~ 1 2;
-#X floatatom 353 655 5 0 0 0 - - -;
-#X obj 353 517 vsl 15 128 0 0.6 0 0 empty empty empty 0 -9 0 10 -204800
+#X obj 884 775 dac~ 1 2;
+#X floatatom 972 725 5 0 0 0 - - -;
+#X obj 972 590 vsl 15 128 0 0.6 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 0 1;
-#X obj 189 649 random 30;
-#X obj 189 673 + 10;
-#X floatatom 188 711 5 0 0 0 - - -;
-#X obj 457 671 threshold;
-#X obj 457 516 vsl 15 128 0 8 0 0 empty empty empty 0 -9 0 10 -204800
+#X obj 816 706 random 30;
+#X obj 816 730 + 10;
+#X floatatom 815 768 5 0 0 0 - - -;
+#X obj 860 671 threshold;
+#X obj 860 516 vsl 15 128 0 8 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 0 1;
-#X floatatom 488 627 5 0 0 0 - - -;
-#X floatatom 530 626 5 0 0 0 - - -;
-#X floatatom 406 623 5 0 0 0 - - -;
+#X floatatom 891 627 5 0 0 0 - - -;
+#X floatatom 933 626 5 0 0 0 - - -;
+#X floatatom 809 623 5 0 0 0 - - -;
 #X obj 1143 76 %;
 #X obj 1334 23 vsl 15 128 1 3 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 12700 1;
 #X floatatom 1335 159 5 0 0 0 - - -;
 #X floatatom 837 236 5 0 0 0 - - -;
 #X obj 819 263 int;
+#X obj 220 644 receive_python, f 42;
 #X connect 0 0 3 0;
 #X connect 1 0 22 0;
 #X connect 1 1 23 0;
