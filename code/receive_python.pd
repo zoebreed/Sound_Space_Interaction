@@ -1,4 +1,4 @@
-#N canvas 222 59 1109 670 12;
+#N canvas 14 23 1109 670 12;
 #X obj 77 33 netreceive -u -b 3333;
 #X obj 77 103 oscparse;
 #X obj 133 130 print parsed_string;
