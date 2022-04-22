@@ -1,5 +1,5 @@
-#N canvas 412 95 1440 830 12;
-#X obj 14 46 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 1 1
+#N canvas 42 23 1440 829 12;
+#X obj 14 46 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0 1
 ;
 #X obj 266 104 sequencer, f 35;
 #X obj 267 6 r ON;
@@ -101,7 +101,7 @@
 #X msg 1073 190 10000 0 \, 5000 100;
 #X obj 1081 90 sel 8;
 #X obj 1081 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1028 90 sel 9;
 #X obj 1030 384 *~ 0.2;
 #X obj 1118 359 > 105;
@@ -166,7 +166,7 @@
 #X obj 1322 576 metro 3000;
 #X obj 28 367 *~;
 #X floatatom 63 386 5 0 0 0 - - -;
-#X obj 63 251 vsl 15 128 0 1.5 0 0 empty empty HEAD:_X 0 -9 0 10 -204800
+#X obj 63 252 vsl 15 128 0 1.5 0 0 empty empty NOSE:_X 0 -9 0 10 -204800
 -1 -1 0 1;
 #X floatatom 1092 780 5 0 0 0 - - -;
 #X obj 1092 643 vsl 15 128 1 6 0 0 empty empty empty 0 -9 0 10 -204800
@@ -176,19 +176,19 @@
 #X obj 510 261 unpack f f f f;
 #X obj 140 361 *~;
 #X floatatom 178 388 5 0 0 0 - - -;
-#X obj 179 250 vsl 15 128 0 1.5 0 0 empty empty HEAD:_Y 0 -9 0 10 -204800
+#X obj 179 250 vsl 15 128 0 1.5 0 0 empty empty NOSE:_Y 0 -9 0 10 -204800
 -1 -1 0 1;
 #X obj 199 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 133 26 loadbang;
 #X obj 1207 744 *~;
-#X obj 137 465 *~ 0.9;
+#X obj 140 540 *~ 0.9;
 #X obj 1172 617 *;
 #X obj 1322 553 r ON;
-#X obj 246 335 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -204800
+#X obj 249 410 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 168 516 *~;
-#X obj 270 384 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -204800
+#X obj 171 587 *~;
+#X obj 272 455 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 897 391 r ON;
 #X floatatom 929 417 5 0 0 0 - - -;
@@ -201,7 +201,7 @@
 -1 -1;
 #X obj 827 423 loadbang;
 #X obj 936 279 vsl 15 128 130 300 0 0 empty empty empty 0 -9 0 10 -204800
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 897 483 f;
 #X obj 897 506 drum;
 #X text 622 138 switches the chords that are being played, f 18;
@@ -214,8 +214,8 @@
 #X obj 1092 618 loadbang;
 #X obj 1387 393 loadbang;
 #X obj 1030 408 throw~ tick_s;
-#X obj 168 491 catch~ tick_s;
-#X obj 138 440 catch~ priep_s;
+#X obj 171 562 catch~ tick_s;
+#X obj 141 515 catch~ priep_s;
 #X obj 1206 785 throw~ priep_s;
 #X obj 884 748 glitter_sound;
 #X obj 926 689 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -239,7 +239,35 @@
 #X floatatom 1335 159 5 0 0 0 - - -;
 #X floatatom 837 236 5 0 0 0 - - -;
 #X obj 819 263 int;
-#X obj 220 644 receive_python, f 42;
+#X floatatom 250 684 5 0 0 0 - - -;
+#X floatatom 291 687 5 0 0 0 - - -;
+#X floatatom 327 770 5 0 0 0 - - -;
+#X floatatom 649 667 5 0 0 0 - - -;
+#X floatatom 368 703 5 0 0 0 - - -;
+#X floatatom 409 703 5 0 0 0 - - -;
+#X floatatom 449 661 5 0 0 0 - - -;
+#X floatatom 489 661 5 0 0 0 - - -;
+#X floatatom 530 726 5 0 0 0 - - -;
+#X floatatom 569 728 5 0 0 0 - - -;
+#X floatatom 608 667 5 0 0 0 - - -;
+#X text 321 749 close/far;
+#X text 364 682 right arm;
+#X text 445 643 left arm;
+#X text 527 707 right leg;
+#X text 603 649 left leg;
+#X text 257 639 x/y position of nose, f 9;
+#X obj 250 617 receive_python, f 57;
+#X obj 250 708 s n_x;
+#X obj 299 710 s n_y;
+#X obj 327 794 s d;
+#X obj 368 727 s u_ra;
+#X obj 416 727 s l_ra;
+#X obj 448 683 s u_la;
+#X obj 496 683 s l_la;
+#X obj 529 750 s u_rl;
+#X obj 579 751 s l_rl;
+#X obj 608 691 s u_ll;
+#X obj 657 692 s l_ll;
 #X connect 0 0 3 0;
 #X connect 1 0 22 0;
 #X connect 1 1 23 0;
@@ -456,3 +484,24 @@
 #X connect 192 0 193 0;
 #X connect 194 0 195 1;
 #X connect 195 0 125 0;
+#X connect 196 0 214 0;
+#X connect 197 0 215 0;
+#X connect 198 0 216 0;
+#X connect 199 0 224 0;
+#X connect 200 0 217 0;
+#X connect 201 0 218 0;
+#X connect 203 0 220 0;
+#X connect 204 0 221 0;
+#X connect 205 0 222 0;
+#X connect 206 0 223 0;
+#X connect 213 0 196 0;
+#X connect 213 1 197 0;
+#X connect 213 2 198 0;
+#X connect 213 3 200 0;
+#X connect 213 4 201 0;
+#X connect 213 5 202 0;
+#X connect 213 6 203 0;
+#X connect 213 7 204 0;
+#X connect 213 8 205 0;
+#X connect 213 9 206 0;
+#X connect 213 10 199 0;
