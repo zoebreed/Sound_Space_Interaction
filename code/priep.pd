@@ -1,48 +1,48 @@
-#N canvas 650 23 929 779 12;
-#X obj 179 279 +;
-#X msg 197 244 3;
-#X msg 233 244 7;
-#X msg 269 244 10;
-#X obj 197 183 random 4;
-#X obj 197 211 sel 0 1 2 3;
-#X msg 306 244 0;
-#X obj 179 307 mtof;
-#X msg 253 296 50;
-#X obj 214 426 vcf~ 3;
-#X obj 149 517 sig~;
-#X floatatom 149 490 5 0 0 0 - - -;
-#X obj 149 416 sin;
-#X obj 149 440 abs;
-#X obj 149 466 * 5000;
-#X obj 214 376 phasor~;
-#X obj 214 400 expr~ $v1 > $v2;
-#X obj 273 373 / 100;
-#X obj 149 389 / 10;
-#X obj 179 334 *;
+#N canvas 511 23 929 779 12;
+#X obj 210 195 +;
+#X msg 228 160 3;
+#X msg 264 160 7;
+#X msg 300 160 10;
+#X obj 228 99 random 4;
+#X obj 228 127 sel 0 1 2 3;
+#X msg 337 160 0;
+#X obj 210 223 mtof;
+#X msg 284 212 50;
+#X obj 245 342 vcf~ 3;
+#X obj 186 408 sig~;
+#X floatatom 186 381 5 0 0 0 - - -;
+#X obj 186 307 sin;
+#X obj 186 331 abs;
+#X obj 186 357 * 5000;
+#X obj 245 292 phasor~;
+#X obj 245 316 expr~ $v1 > $v2;
+#X obj 304 289 / 100;
+#X obj 186 280 / 10;
+#X obj 210 250 *;
 #X obj 86 44 inlet;
 #X obj 145 45 inlet;
 #X obj 224 44 inlet;
 #X obj 304 45 inlet;
-#X text 134 17 r timer;
-#X text 81 16 r_ll;
-#X text 204 17 metro_time;
-#X obj 213 529 outlet~;
-#X text 304 16 r base;
-#X obj 376 47 inlet;
-#X text 380 17 metro;
-#X obj 214 492 *~;
-#X obj 362 352 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 138 21 r timer;
+#X text 87 21 r_ll;
+#X text 210 22 metro_time;
+#X obj 245 401 outlet~;
+#X text 299 23 r base;
+#X obj 393 181 inlet;
+#X text 392 160 metro;
+#X obj 245 375 *~;
+#X obj 393 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 15;
-#X obj 362 374 metro 50;
-#X obj 311 440 vline~;
-#X msg 362 421 0.1 0 \, 0 20;
-#X obj 362 402 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 393 290 metro 50;
+#X obj 342 356 vline~;
+#X msg 393 337 0.1 0 \, 0 20;
+#X obj 393 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 378 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 409 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 378 315 del 1 300 msec;
-#X obj 380 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 409 231 del 1 300 msec;
+#X obj 393 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 7 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 1;

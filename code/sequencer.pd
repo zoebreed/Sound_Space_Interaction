@@ -1,5 +1,5 @@
-#N canvas 394 208 1046 524 12;
-#X obj 106 66 inlet;
+#N canvas 669 208 744 524 12;
+#X obj 106 108 inlet;
 #X obj 106 154 f;
 #X obj 139 154 + 1;
 #X obj 106 204 % 16;
@@ -21,17 +21,19 @@
 #X obj 521 301 outlet;
 #X obj 887 292 outlet;
 #X msg 156 114 -1;
-#X text 154 90 reset;
 #X obj 106 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 106 180 5 0 0 0 - - -;
 #X floatatom 106 228 5 0 0 0 - - -;
-#X text 100 24 sequencer;
-#X connect 0 0 23 0;
+#X text 105 15 sequencer.pd;
+#X text 105 30 simple sequencer;
+#X obj 156 90 loadbang;
+#X text 187 111 reset timer;
+#X connect 0 0 22 0;
 #X connect 1 0 2 0;
-#X connect 1 0 24 0;
+#X connect 1 0 23 0;
 #X connect 2 0 1 1;
-#X connect 3 0 25 0;
+#X connect 3 0 24 0;
 #X connect 4 0 5 0;
 #X connect 4 1 6 0;
 #X connect 4 2 7 0;
@@ -49,6 +51,7 @@
 #X connect 4 14 18 0;
 #X connect 4 16 20 0;
 #X connect 21 0 1 1;
-#X connect 23 0 1 0;
-#X connect 24 0 3 0;
-#X connect 25 0 4 0;
+#X connect 22 0 1 0;
+#X connect 23 0 3 0;
+#X connect 24 0 4 0;
+#X connect 27 0 21 0;

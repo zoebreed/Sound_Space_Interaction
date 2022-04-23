@@ -1,43 +1,43 @@
-#N canvas 63 23 1346 830 12;
+#N canvas 51 23 1346 830 12;
 #X obj 15 46 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0 1
 ;
-#X obj 268 15 r ON;
+#X obj 228 46 r ON;
 #X obj 15 79 s ON;
 #X text 12 10 Press here to start, f 10;
-#X obj 83 536 dac~ 1 2;
-#X obj 268 40 metro 250;
-#X obj 200 104 f;
-#X obj 235 104 + 1;
-#X floatatom 156 134 5 0 0 0 - - -;
-#X msg 200 72 -1;
-#X obj 307 103 r timer;
-#X obj 200 133 s timer;
-#X obj 277 66 s metro_time;
-#X text 117 57 rest timer;
-#X obj 457 133 vsl 15 128 0.1 30 0 0 empty empty Upper_LA 0 -9 0 10
+#X obj 69 590 dac~ 1 2;
+#X obj 228 71 metro 250;
+#X obj 160 135 f;
+#X obj 195 135 + 1;
+#X floatatom 116 165 5 0 0 0 - - -;
+#X msg 160 103 -1;
+#X obj 267 134 r timer;
+#X obj 160 164 s timer;
+#X obj 237 97 s metro_time;
+#X text 77 88 rest timer;
+#X obj 417 164 vsl 15 128 0.1 30 0 0 empty empty Upper_LA 0 -9 0 10
 -232576 -1 -1 0 1;
 #X obj 629 448 vsl 15 128 400 1000 0 0 empty empty upper_LL 0 -9 0
 10 -232576 -1 -1 0 1;
 #X floatatom 629 583 5 0 0 0 - - -;
 #X obj 546 439 metro 3000;
-#X obj 50 388 *~;
-#X obj 121 271 vsl 15 128 0 1.5 0 0 empty empty nose_x 0 -9 0 10 -232576
+#X obj 36 442 *~;
+#X obj 107 325 vsl 15 128 0 1.5 0 0 empty empty nose_x 0 -9 0 10 -232576
 -1 -1 0 1;
 #X floatatom 419 568 5 0 0 0 - - -;
 #X obj 419 431 vsl 15 128 1 6 0 0 empty empty lower_LL 0 -9 0 10 -232576
 -1 -1 0 1;
-#X obj 169 384 *~;
-#X obj 272 250 vsl 15 128 0 1.5 0 0 empty empty nose_y 0 -9 0 10 -232576
+#X obj 155 438 *~;
+#X obj 258 304 vsl 15 128 0 1.5 0 0 empty empty nose_y 0 -9 0 10 -232576
 -1 -1 0 1;
-#X obj 200 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 160 84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 134 26 loadbang;
-#X obj 239 411 *~ 0.9;
+#X obj 94 57 loadbang;
+#X obj 225 465 *~ 0.9;
 #X obj 546 416 r ON;
-#X obj 324 250 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 310 304 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 237 464 *~;
-#X obj 347 333 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 223 518 *~;
+#X obj 333 387 vsl 15 128 0 1.5 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 987 138 r ON;
 #X floatatom 1019 164 5 0 0 0 - - -;
@@ -54,11 +54,11 @@
 #X obj 987 230 f;
 #X obj 987 253 drum;
 #X obj 987 281 throw~ drum_s;
-#X obj 171 237 catch~ drum_s;
-#X obj 51 235 catch~ voice_s;
+#X obj 157 291 catch~ drum_s;
+#X obj 37 289 catch~ voice_s;
 #X obj 678 166 throw~ tick_s;
-#X obj 237 441 catch~ tick_s;
-#X obj 240 386 catch~ priep_s;
+#X obj 223 495 catch~ tick_s;
+#X obj 226 440 catch~ priep_s;
 #X obj 459 485 throw~ priep_s;
 #X obj 891 688 glitter_sound;
 #X obj 934 647 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -100,12 +100,12 @@
 #X obj 572 736 s l_rl;
 #X obj 601 686 s u_ll;
 #X obj 650 687 s l_ll;
-#X obj 69 315 r n_x;
-#X obj 188 279 r n_y;
-#X floatatom 69 364 5 0 0 0 - - -;
-#X floatatom 188 356 5 0 0 0 - - -;
-#X obj 236 494 catch~ glitterL;
-#X obj 228 520 catch~ glitterR;
+#X obj 55 369 r n_x;
+#X obj 174 333 r n_y;
+#X floatatom 55 418 5 0 0 0 - - -;
+#X floatatom 174 410 5 0 0 0 - - -;
+#X obj 222 548 catch~ glitterL;
+#X obj 214 574 catch~ glitterR;
 #X obj 891 780 throw~ glitterL;
 #X obj 980 756 throw~ glitterR;
 #X msg 950 603 135;
@@ -119,15 +119,15 @@
 #X obj 418 379 + 1;
 #X obj 1018 86 r l_la;
 #X obj 1019 110 cyclone/scale 0 360 130 300;
-#X obj 411 88 / 12;
-#X obj 411 112 + 0.1;
-#X obj 411 64 r u_la;
-#X obj 220 316 / 300;
-#X obj 69 340 / 1800;
+#X obj 371 119 / 12;
+#X obj 371 143 + 0.1;
+#X obj 371 95 r u_la;
+#X obj 206 370 / 300;
+#X obj 55 394 / 1800;
 #X msg 907 604 200;
 #X obj 613 409 cyclone/scale 170 270 400 1000;
-#X obj 188 332 -;
-#X msg 188 305 1;
+#X obj 174 386 -;
+#X msg 174 359 1;
 #X obj 1074 688 glitter_sound;
 #X obj 1118 652 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -157,16 +157,15 @@
 #X msg 725 78 6;
 #X obj 740 100 -;
 #X obj 760 78 / 3.7;
-#X text 558 63 Creates ticking sound;
-#X text 559 80 Variates in speed with distance of person, f 27;
+#X text 544 64 Creates ticking sound;
 #X obj 459 457 priep, f 9;
 #X obj 472 345 r timer;
 #X obj 489 370 r metro_time;
 #X obj 506 394 r base;
-#X obj 267 131 voice, f 12;
-#X obj 267 157 s base;
-#X obj 348 158 throw~ voice_s;
-#X floatatom 411 135 5 0 0 0 - - -;
+#X obj 227 162 voice, f 12;
+#X obj 227 188 s base;
+#X obj 308 189 throw~ voice_s;
+#X floatatom 371 166 5 0 0 0 - - -;
 #X text 861 385 Activated with upper right arm & upper right leg;
 #X text 861 401 Amplitude influenced with lower right arm & lower right
 leg;
@@ -178,25 +177,35 @@ leg;
 #X text 895 232 reset timer;
 #X text 1111 158 Speed influenced by lower left arm, f 14;
 #X obj 678 143 ticking;
-#X text 558 47 TICKING;
+#X text 544 48 TICKING;
 #X text 860 369 GLITTER;
 #X text 477 287 PRIEP;
-#X text 477 302 Speed influenced with upper left leg;
-#X text 472 318 "Tone height" influenced with lower left leg;
-#X text 407 11 VOICE;
+#X text 367 24 VOICE;
+#X text 477 302 Frequency of playing influenced with upper left leg
+;
+#X text 545 81 Variates in frequency of playing with distance of person
+, f 27;
+#X text 477 317 Frequency of "tone" influenced with lower left leg
+;
+#X text 367 43 Frequency of sound influenced with upper left arm,
+f 20;
+#X text 37 226 X position of nose influences amplited of VOICE, f
+16;
+#X text 167 225 Y position of nose influences amplited of DRUM, f
+15;
 #X connect 0 0 2 0;
 #X connect 1 0 5 0;
 #X connect 5 0 6 0;
 #X connect 5 0 12 0;
-#X connect 5 0 145 0;
+#X connect 5 0 144 0;
 #X connect 6 0 7 0;
 #X connect 6 0 8 0;
 #X connect 6 0 11 0;
 #X connect 7 0 6 1;
 #X connect 9 0 6 0;
-#X connect 10 0 145 1;
+#X connect 10 0 144 1;
 #X connect 15 0 16 0;
-#X connect 17 0 141 4;
+#X connect 17 0 140 4;
 #X connect 18 0 4 0;
 #X connect 18 0 4 1;
 #X connect 21 0 20 0;
@@ -277,14 +286,14 @@ leg;
 #X connect 100 0 101 0;
 #X connect 101 0 102 0;
 #X connect 102 0 21 0;
-#X connect 102 0 141 0;
+#X connect 102 0 140 0;
 #X connect 103 0 104 0;
 #X connect 104 0 32 0;
 #X connect 104 0 39 0;
 #X connect 105 0 106 0;
 #X connect 106 0 14 0;
-#X connect 106 0 145 2;
-#X connect 106 0 148 0;
+#X connect 106 0 144 2;
+#X connect 106 0 147 0;
 #X connect 107 0 105 0;
 #X connect 108 0 112 1;
 #X connect 109 0 88 0;
@@ -312,17 +321,17 @@ leg;
 #X connect 127 0 131 2;
 #X connect 130 0 50 0;
 #X connect 131 0 115 0;
-#X connect 132 0 158 0;
+#X connect 132 0 157 0;
 #X connect 133 0 136 0;
 #X connect 133 0 138 0;
-#X connect 135 0 158 1;
+#X connect 135 0 157 1;
 #X connect 136 0 137 0;
 #X connect 137 0 135 0;
 #X connect 137 0 134 0;
 #X connect 138 0 137 1;
-#X connect 141 0 48 0;
-#X connect 142 0 141 1;
-#X connect 143 0 141 2;
-#X connect 144 0 141 3;
-#X connect 145 0 146 0;
-#X connect 145 1 147 0;
+#X connect 140 0 48 0;
+#X connect 141 0 140 1;
+#X connect 142 0 140 2;
+#X connect 143 0 140 3;
+#X connect 144 0 145 0;
+#X connect 144 1 146 0;
