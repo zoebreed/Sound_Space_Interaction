@@ -1,7 +1,7 @@
-#N canvas 736 29 1179 1023 12;
+#N canvas 49 23 1179 830 12;
 #X obj 141 477 osc~;
 #X obj 57 201 mtof;
-#X floatatom 57 171 5 0 0 0 - - -, f 5;
+#X floatatom 57 171 5 0 0 0 - - -;
 #X obj 141 506 *~;
 #X obj 146 86 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -52,9 +52,21 @@
 #X obj 436 305 / 1;
 #X obj 57 229 s \$0-freq;
 #X obj 51 331 r \$0-freq;
-#X text 250 39 additive-voice.pd - additive synth with randomiser;
-#X text 250 64 randomiser changes all voices' octave in the range of
+#X text 789 57 randomiser changes all voices' octave in the range of
 1-5 and their volume, f 44;
+#X obj 1302 611 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 15;
+#X obj 1302 633 metro 50;
+#X obj 1251 699 vline~;
+#X msg 1302 680 0.1 0 \, 0 20;
+#X obj 1302 661 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1318 596 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1318 574 del 1 300 msec;
+#X text 222 18 This patch is taken from: argarak;
+#X text 222 35 https://patchstorage.com/sk_dream_iteration/;
+#X text 782 33 additive synth with randomiser;
 #X connect 0 0 3 0;
 #X connect 1 0 50 0;
 #X connect 2 0 1 0;
@@ -117,3 +129,9 @@
 #X connect 51 0 22 0;
 #X connect 51 0 27 0;
 #X connect 51 0 39 0;
+#X connect 53 0 54 0;
+#X connect 54 0 57 0;
+#X connect 56 0 55 0;
+#X connect 57 0 56 0;
+#X connect 58 0 53 0;
+#X connect 59 0 58 0;
