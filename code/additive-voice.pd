@@ -66,7 +66,7 @@
 #X obj 1318 574 del 1 300 msec;
 #X text 222 18 This patch is taken from: argarak;
 #X text 222 35 https://patchstorage.com/sk_dream_iteration/;
-#X text 782 33 additive synth with randomiser;
+#X text 789 35 additive synth with randomiser;
 #X connect 0 0 3 0;
 #X connect 1 0 50 0;
 #X connect 2 0 1 0;
