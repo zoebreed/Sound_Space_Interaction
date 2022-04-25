@@ -3,12 +3,13 @@ import time
 import math
 import cv2
  
+# pose detector, mainly inspired by CVZone's tutorial:
+# https://www.computervision.zone/courses/pose-estimation/
  
 class poseDetector():
  
     def __init__(self, mode=False, upBody=False, smooth=True,
                  detectionCon=0.5, trackCon=0.5):
- 
         self.mode = mode
         self.upBody = upBody
         self.smooth = smooth
@@ -53,8 +54,6 @@ class poseDetector():
                              math.atan2(y1 - y2, x1 - x2))
         if angle < 0:
             angle += 360
- 
-        # print(angle)
  
         # Draw
         if draw:

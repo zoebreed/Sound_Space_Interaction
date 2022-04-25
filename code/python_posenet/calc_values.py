@@ -1,29 +1,8 @@
 import math
 
-# def calc_angle(pos1, pos2, pos3):
-# 	''' calculates the angle between 2 lines which are defined by 1 points. 
-# 	Inspired by the following tutorial: https://www.youtube.com/watch?v=cIyziswpu_w ''' 
-
-# 	# first line
-# 	dy1 = pos2[2] - pos1[2]
-# 	dx1 = pos2[1] - pos1[1]
-# 	alpha = math.atan2(dy1, dx1)
-
-# 	# second line 
-# 	dy2 = pos3[2] - pos2[2]
-# 	dx2 =  pos3[1] - pos2[1]
-# 	beta = math.atan2(dy2, dx2)
-
-# 	# angle difference
-# 	if alpha - beta <= 90:
-# 		phi = alpha - beta
-# 	else:
-# 		phi = 180 - alpha - beta
-
-# 	return phi 
-
-
 def calc_body_area(x11, x12, x23, x24, y12, y24, frame_shape):
+	'''Calculates the body area of the trapezium from right shoulder, 
+	left shoulder, right hip and left hip landmarks'''
 	length_shoulders = abs(x11 - x12) / (0.1 * frame_shape[0])
 	length_hips = abs(x23 - x24) / (0.1 * frame_shape[0])
 	height_body = abs(y12 - y24) / (0.1 * frame_shape[1])

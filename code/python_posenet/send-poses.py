@@ -17,8 +17,6 @@ while True:
     frame_shape = (cap.get(3), cap.get(4))
     lmList = detector.findPosition(img, draw=False)
     if len(lmList) !=0:
-        # for i, landmark in enumerate(lmList):
-        #     client.send_message(f"/pose{i}/{landmark[1]}/{landmark[2]}", 100)
         useful_values = calc_useful_pose_values(detector, img, lmList, frame_shape)
         for i, value in enumerate(useful_values):
             client.send_message(f"/{i}", value)
