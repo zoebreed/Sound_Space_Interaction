@@ -12,7 +12,8 @@
 #X obj 447 83 inlet;
 #X obj 178 131 t b b;
 #X text 441 56 note \, 10-40;
-#X text 175 14 scales the note randomly;
+#X text 24 25 scales the note randomly;
+#X text 23 10 random_note.pd;
 #X connect 0 0 4 1;
 #X connect 1 0 0 1;
 #X connect 2 0 0 0;
