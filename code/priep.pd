@@ -1,48 +1,50 @@
-#N canvas 511 23 929 779 12;
-#X obj 210 195 +;
-#X msg 228 160 3;
-#X msg 264 160 7;
-#X msg 300 160 10;
-#X obj 228 99 random 4;
-#X obj 228 127 sel 0 1 2 3;
-#X msg 337 160 0;
-#X obj 210 223 mtof;
-#X msg 284 212 50;
-#X obj 245 342 vcf~ 3;
-#X obj 186 408 sig~;
-#X floatatom 186 381 5 0 0 0 - - -;
-#X obj 186 307 sin;
-#X obj 186 331 abs;
-#X obj 186 357 * 5000;
-#X obj 245 292 phasor~;
-#X obj 245 316 expr~ $v1 > $v2;
-#X obj 304 289 / 100;
-#X obj 186 280 / 10;
-#X obj 210 250 *;
-#X obj 86 44 inlet;
-#X obj 145 45 inlet;
-#X obj 224 44 inlet;
-#X obj 304 45 inlet;
-#X text 138 21 r timer;
-#X text 87 21 r_ll;
-#X text 210 22 metro_time;
-#X obj 245 401 outlet~;
-#X text 299 23 r base;
-#X obj 393 181 inlet;
-#X text 392 160 metro;
-#X obj 245 375 *~;
-#X obj 393 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#N canvas 481 35 929 779 12;
+#X obj 185 261 +;
+#X msg 203 226 3;
+#X msg 239 226 7;
+#X msg 275 226 10;
+#X obj 203 165 random 4;
+#X obj 203 193 sel 0 1 2 3;
+#X msg 312 226 0;
+#X obj 185 289 mtof;
+#X msg 259 278 50;
+#X obj 220 408 vcf~ 3;
+#X obj 161 474 sig~;
+#X floatatom 161 447 5 0 0 0 - - -;
+#X obj 161 373 sin;
+#X obj 161 397 abs;
+#X obj 161 423 * 5000;
+#X obj 220 358 phasor~;
+#X obj 220 382 expr~ $v1 > $v2;
+#X obj 279 355 / 100;
+#X obj 161 346 / 10;
+#X obj 185 316 *;
+#X obj 61 110 inlet;
+#X obj 120 111 inlet;
+#X obj 199 110 inlet;
+#X obj 279 111 inlet;
+#X text 113 87 r timer;
+#X text 62 87 r_ll;
+#X text 185 88 metro_time;
+#X obj 220 467 outlet~;
+#X text 274 89 r base;
+#X obj 368 247 inlet;
+#X text 367 226 metro;
+#X obj 220 441 *~;
+#X obj 368 334 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 15;
-#X obj 393 290 metro 50;
-#X obj 342 356 vline~;
-#X msg 393 337 0.1 0 \, 0 20;
-#X obj 393 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 368 356 metro 50;
+#X obj 317 422 vline~;
+#X msg 368 403 0.1 0 \, 0 20;
+#X obj 368 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 409 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 384 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 409 231 del 1 300 msec;
-#X obj 393 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 384 297 del 1 300 msec;
+#X obj 368 272 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X text 56 13 priep.pd;
+#X text 55 32 patch that creates "prieping" sound;
 #X connect 0 0 7 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 1;
