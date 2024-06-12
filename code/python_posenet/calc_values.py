@@ -41,3 +41,6 @@ def calc_useful_pose_values(detector, img, lmlst, frame_shape):
 						angle_arm_LR, angle_leg_UL, angle_leg_LL, angle_leg_UR, angle_leg_LR]
 
 	return useful_values
+
+def empty_values():
+	return 11*[0]

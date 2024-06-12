@@ -1,4 +1,4 @@
-#N canvas 61 23 1119 829 12;
+#N canvas 61 25 1119 785 12;
 #X obj 356 569 *~ 0.3;
 #X obj 138 640 *~ 0.7;
 #X obj 524 650 *~ 0.7;
@@ -37,7 +37,7 @@
 #X obj 209 105 inlet;
 #X obj 292 740 *~ 1;
 #X obj 408 737 *~ 1;
-#X obj 814 664 inlet;
+#X obj 824 660 inlet;
 #X text 797 634 amplitude;
 #X obj 421 81 inlet;
 #X obj 292 765 outlet~;

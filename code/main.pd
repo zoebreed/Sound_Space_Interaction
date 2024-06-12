@@ -1,4 +1,4 @@
-#N canvas 12 23 1411 830 12;
+#N canvas -140 109 1395 669 12;
 #X obj 15 45 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0 1
 ;
 #X obj 106 377 r ON;
@@ -15,14 +15,14 @@
 #X obj 103 427 s metro_time;
 #X text 27 338 rest timer;
 #X obj 318 328 vsl 15 128 0.1 30 0 0 empty empty Upper_LA 0 -9 0 10
--232576 -1 -1 8424 1;
+-232576 -1 -1 8530 1;
 #X obj 1147 659 vsl 15 128 400 1000 0 0 empty empty upper_LL 0 -9 0
-10 -232576 -1 -1 10414 1;
+10 -232576 -1 -1 10922 1;
 #X floatatom 1147 794 5 0 0 0 - - -;
 #X obj 1064 650 metro 3000;
 #X floatatom 937 779 5 0 0 0 - - -;
 #X obj 937 642 vsl 15 128 1 6 0 0 empty empty lower_LL 0 -9 0 10 -232576
--1 -1 7705 1;
+-1 -1 7366 1;
 #X obj 35 386 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 35 359 loadbang;
@@ -38,7 +38,7 @@
 -1 -1;
 #X obj 506 302 loadbang;
 #X obj 656 278 vsl 15 128 130 300 0 0 empty empty lower_LA 0 -9 0 10
--232576 -1 -1 7867 1;
+-232576 -1 -1 212 1;
 #X obj 576 362 f;
 #X obj 576 385 drum;
 #X obj 576 594 throw~ drum_s;
@@ -51,7 +51,7 @@
 -1 -1;
 #X floatatom 1046 319 5 0 0 0 - - -;
 #X obj 1046 179 vsl 15 128 0 1.5 0 0 empty empty lower_RA 0 -9 0 10
--232576 -1 -1 9708 1;
+-232576 -1 -1 734 1;
 #X obj 916 320 random 30;
 #X obj 916 344 + 10;
 #X obj 930 124 vsl 15 128 0 8 0 0 empty empty upper_RA 0 -9 0 10 -232576
@@ -110,11 +110,11 @@
 -1 -1;
 #X floatatom 1225 309 5 0 0 0 - - -;
 #X obj 1225 169 vsl 15 128 0 1.5 0 0 empty empty lower_RL 0 -9 0 10
--232576 -1 -1 5165 1;
+-232576 -1 -1 4995 1;
 #X obj 1096 322 random 30;
 #X obj 1096 346 + 10;
 #X obj 1126 122 vsl 15 128 0 200 0 0 empty empty upper_RL 0 -9 0 10
--232576 -1 -1 5397 1;
+-232576 -1 -1 5651 1;
 #X floatatom 1112 260 5 0 0 0 - - -;
 #X obj 1151 238 loadbang;
 #X obj 1222 133 / 300;
@@ -135,7 +135,7 @@
 #X obj 684 697 -;
 #X obj 704 675 / 3.7;
 #X text 488 661 Creates ticking sound;
-#X obj 976 668 priep, f 9;
+#X obj 975 667 priep, f 9;
 #X obj 990 556 r timer;
 #X obj 1005 581 r metro_time;
 #X obj 1021 605 r base;
@@ -180,7 +180,7 @@ f 21;
 #X obj 976 692 *~ 1.5;
 #X obj 622 764 *~ 0.5;
 #X obj 683 462 vsl 15 128 0 1.5 0 0 empty empty nose_y 0 -9 0 10 -232576
--1 -1 1308 1;
+-1 -1 2502 1;
 #X obj 639 432 r n_y;
 #X floatatom 602 518 5 0 0 0 - - -;
 #X obj 613 464 -;
@@ -194,7 +194,7 @@ f 21;
 #X obj 51 663 catch~ drum_s;
 #X obj 222 638 *~;
 #X obj 297 493 vsl 15 128 0 1 0 0 empty empty nose_x 0 -9 0 10 -232576
--1 -1 6890 1;
+-1 -1 6720 1;
 #X obj 240 552 r n_x;
 #X floatatom 240 601 5 0 0 0 - - -;
 #X text 337 507 X position of nose influences amplited of VOICE, f
